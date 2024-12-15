@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HoPa</title>
+  
+  <!-- Tab Icon (Favicon) -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/HrjlQrOfCvtE7lCAy3ra7UmTAAx0EZZURO12jATRCsJuvdfrSeh5g5aDqUBTECY-d1grzGo0fDv9RoIjV8Kk22k=w1280">
+
+  <script async src="https://cse.google.com/cse.js?cx=d02548ed1f71d495f"></script> <!-- Google CSE Script -->
+  <style>
+    /* Font Import */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+    body {
+      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0056b3, #ff0000, #00c6ff); /* Gradient: Blue, Red, Cyan */
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header img {
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .search-container {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Styling Google CSE search box */
+    .gcse-search {
+      width: 100%;
+    }
+
+    .gsc-input-box {
+      border-radius: 10px;
+      font-size: 16px;
+      padding: 12px;
+      border: 2px solid #ddd;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gsc-input-box:focus {
+      border-color: #0056b3;
+      box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+    }
+
+    /* Force input text color to black */
+    .gsc-input {
+      color: #000 !important; /* Make input text black */
+    }
+
+    /* Styling the results */
+    .gsc-webResult .gs-title, .gsc-webResult .gs-snippet {
+      color: #000 !important; /* Make results text black */
+    }
+
+    /* Autosuggestions dropdown (Google CSE custom styles override) */
+    .gsc-completion-container {
+      color: #000 !important; /* Make autosuggestions text black */
+      background: #fff !important; /* Set suggestions background to white */
+    }
+
+    .gsc-completion-container .gsc-completion-title,
+    .gsc-completion-container .gsc-completion-snippet {
+      color: #000 !important; /* Ensure title and snippet are black */
+    }
+
+    .gsc-completion-container .gsc-completion-title {
+      font-weight: bold; /* Optional: Make suggestion title bold */
+    }
+
+    .gsc-results-wrapper-overlay {
+      max-height: 500px;
+      overflow-y: auto; /* Allow results to scroll */
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: auto;
+      width: 100%;
+      text-align: center;
+      background: #000;
+      padding: 20px;
+      color: #fff;
+    }
+
+    footer .bonlute-footer-logo {
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      color: #fff;
+      text-transform: none;
+    }
+
+    /* Wingdings 2 font for April 1st */
+    .wingdings2-font {
+      font-family: "Wingdings 2", sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 22px;
+      }
+
+      footer .bonlute-footer-logo {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Website Logo -->
+  <header>
+    <img src="https://lh3.googleusercontent.com/HrjlQrOfCvtE7lCAy3ra7UmTAAx0EZZURO12jATRCsJuvdfrSeh5g5aDqUBTECY-d1grzGo0fDv9RoIjV8Kk22k=w1280" alt="HoPa Logo">
+  </header>
+
+  <!-- Search Engine Title -->
+  <h2>HoPa</h2>
+
+  <!-- Search Container -->
+  <div class="search-container">
+    <div class="gcse-search"></div> <!-- Google CSE search box -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made by <span class="bonlute-footer-logo">Bonlute</span></p>
+  </footer>
+
+  <script>
+    (function() {
+      var cx = 'd02548ed1f71d495f';  // Your Google Custom Search Engine ID
+      var gcse = document.createElement('script'); 
+      gcse.type = 'text/javascript'; 
+      gcse.async = true; 
+      gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; 
+      var s = document.getElementsByTagName('script')[0]; 
+      s.parentNode.insertBefore(gcse, s);
+
+      // Check if the date is April 1st and apply Wingdings 2 font
+      var currentDate = new Date();
+      if (currentDate.getMonth() === 3 && currentDate.getDate() === 1) {  // April 1st
+        document.body.classList.add('wingdings2-font');
+      }
+    })();
+  </script>
+</body>
+</html>
