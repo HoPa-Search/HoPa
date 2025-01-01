@@ -6,50 +6,67 @@
   <title>HoPa</title>
   
   <!-- Tab Icon (Favicon) -->
-  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/HrjlQrOfCvtE7lCAy3ra7UmTAAx0EZZURO12jATRCsJuvdfrSeh5g5aDqUBTECY-d1grzGo0fDv9RoIjV8Kk22k=w1280">
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/ino4L50g_Ly_Q76k0xUS5v87g_JRG6RcS0m5hLPsoRNlWvau08TOIxQ190UjduFP7t2OGzAhxTiLVFGlc0_PQao=w1280">
 
   <script async src="https://cse.google.com/cse.js?cx=d02548ed1f71d495f"></script> <!-- Google CSE Script -->
   <style>
     /* Font Import */
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
+    /* Animated Gradient Background */
     body {
       font-family: 'Roboto Mono', monospace;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #0056b3, #ff0000, #00c6ff); /* Gradient: Blue, Red, Cyan */
+      background: linear-gradient(135deg, #0056b3, #ff0000, #00c6ff);
+      background-size: 300% 300%;
+      animation: gradientAnimation 8s ease infinite;
       color: #fff;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
       justify-content: center;
       align-items: center;
+      overflow-x: hidden;
     }
 
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating Logo Animation */
     header img {
       max-width: 150px;
       height: auto;
       margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 20px;
       color: #fff;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     .search-container {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 15px;
       padding: 20px;
       width: 100%;
       max-width: 700px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
       text-align: center;
       position: relative;
-      overflow: visible;
     }
 
     /* Styling Google CSE search box */
@@ -62,52 +79,26 @@
       font-size: 16px;
       padding: 12px;
       border: 2px solid #ddd;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
     }
 
-    .gsc-input-box:focus {
+    .gsc-input-box:focus, .gsc-input-box:hover {
       border-color: #0056b3;
-      box-shadow: 0 0 8px rgba(0, 86, 179, 0.5);
+      box-shadow: 0 0 12px rgba(0, 86, 179, 0.6);
     }
 
-    /* Force input text color to black */
     .gsc-input {
-      color: #000 !important; /* Make input text black */
-    }
-
-    /* Styling the results */
-    .gsc-webResult .gs-title, .gsc-webResult .gs-snippet {
-      color: #000 !important; /* Make results text black */
-    }
-
-    /* Autosuggestions dropdown (Google CSE custom styles override) */
-    .gsc-completion-container {
-      color: #000 !important; /* Make autosuggestions text black */
-      background: #fff !important; /* Set suggestions background to white */
-    }
-
-    .gsc-completion-container .gsc-completion-title,
-    .gsc-completion-container .gsc-completion-snippet {
-      color: #000 !important; /* Ensure title and snippet are black */
-    }
-
-    .gsc-completion-container .gsc-completion-title {
-      font-weight: bold; /* Optional: Make suggestion title bold */
-    }
-
-    .gsc-results-wrapper-overlay {
-      max-height: 500px;
-      overflow-y: auto; /* Allow results to scroll */
-      margin-top: 20px;
+      color: #000 !important; /* Input text color */
     }
 
     footer {
       margin-top: auto;
       width: 100%;
       text-align: center;
-      background: #000;
+      background: rgba(0, 0, 0, 0.9);
       padding: 20px;
       color: #fff;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
     }
 
     footer .bonlute-footer-logo {
@@ -115,7 +106,31 @@
       font-weight: bold;
       text-decoration: underline;
       color: #fff;
-      text-transform: none;
+      transition: color 0.3s ease;
+    }
+
+    footer .bonlute-footer-logo:hover {
+      color: #00c6ff;
+      text-shadow: 0 0 10px #00c6ff;
+    }
+
+    footer .social-icons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    footer .social-icons a {
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      transform: scale(1.2);
+      color: #00c6ff;
     }
 
     /* Wingdings 2 font for April 1st */
@@ -125,7 +140,7 @@
 
     @media (max-width: 600px) {
       h2 {
-        font-size: 22px;
+        font-size: 24px;
       }
 
       footer .bonlute-footer-logo {
@@ -137,7 +152,7 @@
 <body>
   <!-- Website Logo -->
   <header>
-    <img src="https://lh3.googleusercontent.com/HrjlQrOfCvtE7lCAy3ra7UmTAAx0EZZURO12jATRCsJuvdfrSeh5g5aDqUBTECY-d1grzGo0fDv9RoIjV8Kk22k=w1280" alt="HoPa Logo">
+    <img src="https://lh3.googleusercontent.com/ino4L50g_Ly_Q76k0xUS5v87g_JRG6RcS0m5hLPsoRNlWvau08TOIxQ190UjduFP7t2OGzAhxTiLVFGlc0_PQao=w1280" alt="HoPa Logo">
   </header>
 
   <!-- Search Engine Title -->
@@ -151,6 +166,11 @@
   <!-- Footer -->
   <footer>
     <p>Made by <span class="bonlute-footer-logo">Bonlute</span></p>
+    <div class="social-icons">
+      <a href="https://twitter.com" target="_blank" title="Twitter">🐦</a>
+      <a href="https://github.com" target="_blank" title="GitHub">💻</a>
+      <a href="https://linkedin.com" target="_blank" title="LinkedIn">🔗</a>
+    </div>
   </footer>
 
   <script>
